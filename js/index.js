@@ -201,10 +201,6 @@ searchLi.addEventListener("click", () => {
   const spinner = document.getElementById("spinner");
 
   searchName.addEventListener("input", function () {
-    if (this.value.length < 2) {
-      recipes.innerHTML = "";
-      return;
-    }
     recipes.innerHTML = "";
 
     fetchDate(URL.searchByName(this.value), (data) => {
